@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo1.ProductsController" prefWidth="1920.0" prefHeight="1080.0">
+
+    <top>
+        <fx:include source="header.fxml" />
+    </top>
+
+    <center>
+        <VBox fx:id="productListVBox" spacing="20" BorderPane.alignment="CENTER">
+            <Label text="Available Products" style="-fx-font-size: 30px; -fx-text-fill: #2c3e50;" />
+        </VBox>
+    </center>
+</BorderPane>

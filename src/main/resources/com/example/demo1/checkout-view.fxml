@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import java.lang.String?>
+<BorderPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.CheckoutController">
+
+    <top>
+        <fx:include source="header.fxml" />
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" BorderPane.alignment="CENTER">
+            <children>
+                <Label style="-fx-font-size: 30px; -fx-text-fill: #2c3e50;" text="Checkout" />
+
+                <Label style="-fx-font-size: 20px;" text="Total Amount:" />
+                <Label fx:id="totalAmountLabel" style="-fx-font-size: 22px; -fx-text-fill: green;" />
+
+                <Label style="-fx-font-size: 20px;" text="Address:" />
+                <TextField fx:id="addressField" prefWidth="520.0" promptText="Enter your delivery address">
+               <VBox.margin>
+                  <Insets left="750.0" right="750.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+
+                <Label style="-fx-font-size: 20px;" text="Payment Method:" />
+                <ChoiceBox fx:id="paymentMethod" prefWidth="300.0" value="Cash On Delivery"/>
+
+
+                <Button fx:id="confirmButton" onAction="#handleConfirm" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-size: 18px;" text="Confirm Purchase" />
+
+                <Label fx:id="statusLabel" style="-fx-text-fill: red;" />
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

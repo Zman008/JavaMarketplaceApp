@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.CartController">
+    <top>
+        <fx:include source="header.fxml" />
+    </top>
+    <center>
+    <VBox>
+        <Label alignment="CENTER" prefHeight="167.0" prefWidth="1920.0" style="-fx-font-size: 36px; -fx-font-weight: bold;" text="Shopping Cart" textAlignment="CENTER" />
+         <HBox prefHeight="57.0" prefWidth="1920.0" style="-fx-background-color: gray;">
+            <children>
+               <Label alignment="CENTER" prefHeight="60.0" prefWidth="480.0" style="-fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: white;" text="Product Name" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Label>
+               <Label alignment="CENTER" prefHeight="60.0" prefWidth="480.0" style="-fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: white;" text="Price" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Label>
+               <Label alignment="CENTER" prefHeight="60.0" prefWidth="480.0" style="-fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: white;" text="Quantity" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Label>
+               <Label alignment="CENTER" prefHeight="60.0" prefWidth="480.0" style="-fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: white;" text="Sub-Total" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Label>
+            </children>
+         </HBox>
+         <VBox fx:id="cartItemsVBox" prefHeight="200.0" prefWidth="100.0" style="-fx-font-size: 20px;" />
+
+        <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="1920.0" spacing="20">
+            <ChoiceBox fx:id="removeChoice" value="---Select Item---" prefHeight="38.0" prefWidth="189.0" />
+            <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#remove" prefHeight="45.0" prefWidth="147.0" style="-fx-background-color: #f24b4b;" text="Remove Item" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="checkoutBtn" mnemonicParsing="false" onAction="#checkout" prefHeight="45.0" prefWidth="147.0" text="Checkout">
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label style="-fx-font-size: 24px;" text="Total: " />
+            <Label fx:id="totalLabel" prefHeight="35.0" prefWidth="276.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="0 Tk" />
+        </HBox>
+    </VBox>
+    </center>
+</BorderPane>

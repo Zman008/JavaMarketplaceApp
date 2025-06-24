@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="1080.0" maxWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.RegisterController">
+    <top>
+        <fx:include source="header.fxml" />
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="25.0">
+           <Hyperlink fx:id="backLink" onAction="#goBack" prefHeight="23.0" prefWidth="160.0" text="← Go Back">
+              <VBox.margin>
+                 <Insets right="170.0" />
+              </VBox.margin>
+           </Hyperlink>
+
+            <Label text="Register New Account">
+                <font>
+                    <Font size="24" />
+                </font>
+            </Label>
+
+            <TextField fx:id="nameField" maxWidth="330" promptText="Username">
+              <font>
+                 <Font size="14.0" />
+              </font></TextField>
+
+            <TextField fx:id="emailField" maxWidth="330" promptText="Email">
+              <font>
+                 <Font size="14.0" />
+              </font></TextField>
+           <TextField fx:id="phoneField" maxWidth="330" promptText="Phone">
+              <font>
+                 <Font size="14.0" />
+              </font>
+           </TextField>
+
+            <PasswordField fx:id="passwordField" maxWidth="330" promptText="Password">
+              <font>
+                 <Font size="14.0" />
+              </font></PasswordField>
+
+            <PasswordField fx:id="confirmPasswordField" maxWidth="330" promptText="Confirm Password">
+              <font>
+                 <Font size="14.0" />
+              </font></PasswordField>
+
+            <Button maxWidth="80" onAction="#handleRegister" prefHeight="30.0" prefWidth="127.0" text="Register">
+              <font>
+                 <Font size="14.0" />
+              </font></Button>
+
+            <Label fx:id="messageLabel" maxWidth="250.0" textFill="green" wrapText="true" />
+        </VBox>
+    </center>
+</BorderPane>
