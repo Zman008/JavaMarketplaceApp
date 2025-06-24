@@ -17,6 +17,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class LoginController {
     @FXML
@@ -32,7 +33,7 @@ public class LoginController {
 
     @FXML
     public void handleLogin(ActionEvent e) throws IOException {
-        if (email.getText() == "admin" && password.getText() == "admin") {
+        if (Objects.equals(email.getText(), "admin") && Objects.equals(password.getText(), "admin")) {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("admin-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
 
