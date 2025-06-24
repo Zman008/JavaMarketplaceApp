@@ -32,6 +32,17 @@ public class LoginController {
 
     @FXML
     public void handleLogin(ActionEvent e) throws IOException {
+        if (email.getText() == "admin" && password.getText() == "admin") {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("admin-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+
+            return;
+        }
+
         messageLabel.setText("");
         String sql = "SELECT id, pass, name, phone FROM users WHERE email = ?";
 
