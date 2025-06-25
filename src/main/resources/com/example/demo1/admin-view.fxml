@@ -20,41 +20,9 @@
 
     <center>
         <VBox alignment="TOP_CENTER" spacing="20">
-         <HBox alignment="CENTER" prefHeight="199.0" prefWidth="1920.0">
-            <VBox.margin>
-               <Insets bottom="50.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-            <children>
-               <Button fx:id="addBtn" mnemonicParsing="false" onAction="#gotoAddProduct" text="Add Product">
-                  <font>
-                     <Font size="24.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                  </HBox.margin>
-               </Button>
-               <Button fx:id="editBtn" mnemonicParsing="false" onAction="#gotoEditProduct" text="Edit Products">
-                  <font>
-                     <Font size="24.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                  </HBox.margin>
-               </Button>
-               <Button fx:id="profileBtn" mnemonicParsing="false" onAction="#gotoProfile" text="Users Profiles">
-                  <font>
-                     <Font size="24.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                  </HBox.margin>
-               </Button>
-            </children>
-         </HBox>
-            <Label style="-fx-font-size: 32px; -fx-font-weight: bold;" text="Admin Dashboard" />
+           <fx:include source="admin-head.fxml"/>
+
+            <Label style="-fx-font-size: 32px; -fx-font-weight: bold;" text="Add Product" />
 
             <GridPane alignment="CENTER" hgap="20" prefHeight="290.0" prefWidth="1920.0" vgap="20">
                 <Label text="Product Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">

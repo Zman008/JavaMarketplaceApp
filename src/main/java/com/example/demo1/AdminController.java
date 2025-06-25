@@ -1,26 +1,17 @@
 package com.example.demo1;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class AdminController {
 
-    public Button addBtn;
-    public Button editBtn;
-    public Button profileBtn;
+
     @FXML
     private TextField productNameField;
 
@@ -71,26 +62,5 @@ public class AdminController {
             messageLabel.setText("Failed to add product.");
             messageLabel.setTextFill(Color.RED);
         }
-    }
-
-    public void gotoAddProduct(ActionEvent e) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("admin-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-    }
-
-    public void gotoEditProduct(ActionEvent e) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("admin-edit.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-    }
-
-    public void gotoProfile(ActionEvent e) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("admin-profiles.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setScene(scene);
     }
 }
