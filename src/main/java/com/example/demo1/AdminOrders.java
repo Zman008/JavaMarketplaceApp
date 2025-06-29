@@ -36,6 +36,7 @@ public class AdminOrders {
                 orderBox.setPadding(new Insets(15));
                 orderBox.setStyle("-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;");
                 orderBox.setPrefWidth(1600);
+                VBox.setMargin(orderBox, new Insets(0, 300, 0, 300));
 
                 Label orderInfo = new Label("Order #" + orderId + " | User Name: " + userName + " | Address: " + address + " | Total: " + total + " Tk");
                 orderInfo.setStyle("-fx-font-size: 22px; -fx-font-weight: bold;");

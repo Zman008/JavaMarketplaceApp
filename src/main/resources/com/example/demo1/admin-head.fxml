@@ -35,6 +35,14 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
         </HBox.margin>
     </Button>
+    <Button fx:id="msgBtn" mnemonicParsing="false" onAction="#gotoMsg" text="Messages">
+        <font>
+            <Font size="24.0" />
+        </font>
+        <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </HBox.margin>
+    </Button>
     <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logout" text="Logout" style="-fx-background-color: #ff4d4d; -fx-text-fill: white;">
         <font>
             <Font size="24.0" />

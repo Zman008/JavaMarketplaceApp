@@ -22,6 +22,12 @@
 
         <Region HBox.hgrow="ALWAYS" />
 
+        <Button fx:id="messageBtn" onAction="#gotoMsg" text="💬">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+
         <Button fx:id="shopping_cart" onAction="#gotoCart" text="🛒">
             <font>
                 <Font size="20.0" />

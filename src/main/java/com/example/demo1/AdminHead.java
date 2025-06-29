@@ -15,6 +15,7 @@ public class AdminHead {
     public Button profileBtn;
     public Button orderBtn;
     public Button logoutBtn;
+    public Button msgBtn;
 
     public void gotoAddProduct(ActionEvent e) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("admin-view.fxml"));
@@ -32,6 +33,13 @@ public class AdminHead {
 
     public void logout(ActionEvent e) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+    }
+
+    public void gotoMsg(ActionEvent e) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("admin-chat.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.setScene(scene);

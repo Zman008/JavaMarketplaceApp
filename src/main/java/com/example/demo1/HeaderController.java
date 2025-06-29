@@ -13,6 +13,7 @@ import java.io.IOException;
 public class HeaderController {
 
     public Button shopping_cart;
+    public Button messageBtn;
     @FXML private Button login;
 
     @FXML
@@ -45,6 +46,20 @@ public class HeaderController {
 
     public void gotoHome(MouseEvent e) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setMaximized(true);
+    }
+
+    @FXML
+    public void gotoMsg(ActionEvent e) throws IOException {
+        FXMLLoader fxmlLoader;
+        if (LoggedInUser.getId() == 0) {
+            fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-view.fxml"));
+        } else {
+            fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("msg-view.fxml"));
+        }
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.setScene(scene);
